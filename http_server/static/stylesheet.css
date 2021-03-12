@@ -1,0 +1,48 @@
+body {
+    background: #eee;
+}
+
+* {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited {
+    color: blue;
+}
+
+div {
+    margin: 0.5rem;
+}
+
+h3 {
+    margin: 1rem 0;
+}
+
+h2 {
+    margin: 0.75rem 0;
+}
+
+.paste-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paste {
+    width: 60%;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid black;
+}
+
+.paste > textarea {
+    width: 100%;
+}

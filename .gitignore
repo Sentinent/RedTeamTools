@@ -1,0 +1,6 @@
+__pycache__
+.venv
+
+http_server/database.sqlite
+http_server/share/*
+!http_server/share/README.md

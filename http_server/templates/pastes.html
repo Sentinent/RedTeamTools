@@ -1,0 +1,26 @@
+<html>
+<head>
+    <link href="/static/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+    <div class="paste-container">
+        {% for paste in pastes %}
+        <div class="paste">
+            <span style="float: left">{{ paste.name }} - {{ paste.size }} bytes</span>
+            <span style="float: right">{{ paste.timestamp }}</span>
+            <br>
+
+            {% if paste.content %}
+            <span>Preview:</span>
+            <br>
+            <textarea rows=30 readonly>{{ paste.content }}</textarea>
+            <br>
+            {% endif %}
+
+            <a href="/download_paste/{{ paste.id }}" target="_blank">Open</a>
+            <a href="/download_paste/{{ paste.id }}" download>Download</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
